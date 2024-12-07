@@ -24,6 +24,14 @@
   </header>
   <hr />
   <main class="main-content">
+    <!-- Табуляція для категорій -->
+    <div class="tabs">
+      <button class="tab" onclick="filterProducts('all')">Всі товари</button>
+      <button class="tab" onclick="filterProducts('product')">Продукти</button>
+      <button class="tab" onclick="filterProducts('cigarette')">Сигарети</button>
+      <button class="tab" onclick="filterProducts('alcohol')">Алкоголь</button>
+      <button class="tab" onclick="filterProducts('water')">Вода</button>
+    </div>
     <section id="productList" class="products"></section>
   </main>
   <script src="./js/script.js"></script>

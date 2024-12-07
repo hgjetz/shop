@@ -1,11 +1,12 @@
 const products = [
-  { id: 0, name: "Вода", brand: "Crystal", photo: "agua.jpg", price: 15.60 },
-  { id: 1, name: "Печиво Bono", brand: "Nestle", photo: "bicoito_chocolate_bono.jpg", price: 45.50 },
-  { id: 2, name: "Шоколадна плитка", brand: "Milka", photo: "barra_chocolate_milka.jpg", price: 90.30 },
-  { id: 3, name: "Кока-Кола", brand: "Coca-Cola", photo: "coca_cola_lata.jpg", price: 27.65 },
-  { id: 4, name: "Йогурт Полуничний", brand: "Nestle", photo: "iogurte.jpg", price: 70.58 },
-  { id: 5, name: "Енергетик", brand: "Monster", photo: "monster.jpg", price: 54.23 },
-  { id: 6, name: "Пиво", brand: "Львівське-Різдвяне", photo: "pivo.jpg", price: 31.52 },
+  { id: 0, name: "Вода", brand: "Crystal", photo: "agua.jpg", price: 15.60, category: "water" },
+  { id: 1, name: "Печиво Bono", brand: "Nestle", photo: "bicoito_chocolate_bono.jpg", price: 45.50, category: "product" },
+  { id: 2, name: "Шоколадна плитка", brand: "Milka", photo: "barra_chocolate_milka.jpg", price: 90.30, category: "product" },
+  { id: 3, name: "Кока-Кола", brand: "Coca-Cola", photo: "coca_cola_lata.jpg", price: 27.65, category: "product" },
+  { id: 4, name: "Йогурт Полуничний", brand: "Nestle", photo: "iogurte.jpg", price: 70.58, category: "product" },
+  { id: 5, name: "Енергетик", brand: "Monster", photo: "monster.jpg", price: 54.23, category: "product" },
+  { id: 6, name: "Пиво", brand: "Львівське-Різдвяне", photo: "pivo.jpg", price: 31.52, category: "alcohol" },
+  { id: 7, name: "Сигарети", brand: "Marlboro", photo: "sigara.jpg", price: 120.35, category: "cigarette" }
 ];
 
 let cart = [];
@@ -37,9 +38,11 @@ function clearCart() {
   updateCart();
 }
 
-function renderProducts() {
+function renderProducts(filteredProducts) {
   const productList = document.getElementById("productList");
-  products.forEach((product) => {
+  productList.innerHTML = ''; // Очистить старые продукты
+
+  filteredProducts.forEach((product) => {
     const productCard = `
       <div class="product-card">
         <img src="./images/${product.photo}" alt="${product.name}" />
@@ -53,4 +56,18 @@ function renderProducts() {
   });
 }
 
-renderProducts();
+// Фильтрация продуктов по категории
+function filterProducts(category) {
+  let filteredProducts;
+  
+  if (category === 'all') {
+    filteredProducts = products; // Все товары
+  } else {
+    filteredProducts = products.filter(product => product.category === category);
+  }
+  
+  renderProducts(filteredProducts);
+}
+
+// Инициализация отображения всех продуктов при загрузке страницы
+renderProducts(products);
