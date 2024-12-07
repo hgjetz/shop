@@ -1,10 +1,11 @@
 const products = [
-  { id: 0, name: "Вода", brand: "Crystal", photo: "agua.jpg", price: 2 },
-  { id: 1, name: "Печиво Bono", brand: "Nestle", photo: "bicoito_chocolate_bono.jpg", price: 3.5 },
-  { id: 2, name: "Шоколадна плитка", brand: "Milka", photo: "barra_chocolate_milka.jpg", price: 6 },
-  { id: 3, name: "Кока-Кола", brand: "Coca-Cola", photo: "coca_cola_lata.jpg", price: 3 },
-  { id: 4, name: "Йогурт Полуничний", brand: "Nestle", photo: "iogurte.jpg", price: 4.2 },
-  { id: 5, name: "Енергетик", brand: "Monster", photo: "monster.jpg", price: 7 },
+  { id: 0, name: "Вода", brand: "Crystal", photo: "agua.jpg", price: 15.60 },
+  { id: 1, name: "Печиво Bono", brand: "Nestle", photo: "bicoito_chocolate_bono.jpg", price: 45.50 },
+  { id: 2, name: "Шоколадна плитка", brand: "Milka", photo: "barra_chocolate_milka.jpg", price: 90.30 },
+  { id: 3, name: "Кока-Кола", brand: "Coca-Cola", photo: "coca_cola_lata.jpg", price: 27.65 },
+  { id: 4, name: "Йогурт Полуничний", brand: "Nestle", photo: "iogurte.jpg", price: 70.58 },
+  { id: 5, name: "Енергетик", brand: "Monster", photo: "monster.jpg", price: 54.23 },
+  { id: 5, name: "Пиво", brand: "Monster", photo: "pivo.jpg", price: 31.52 },
 ];
 
 let cart = [];
