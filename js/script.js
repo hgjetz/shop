@@ -5,7 +5,7 @@ const products = [
   { id: 3, name: "Кока-Кола", brand: "Coca-Cola", photo: "coca_cola_lata.jpg", price: 27.65 },
   { id: 4, name: "Йогурт Полуничний", brand: "Nestle", photo: "iogurte.jpg", price: 70.58 },
   { id: 5, name: "Енергетик", brand: "Monster", photo: "monster.jpg", price: 54.23 },
-  { id: 5, name: "Пиво", brand: "Львівське-Різдвяне", photo: "pivo.jpg", price: 31.52 },
+  { id: 6, name: "Пиво", brand: "Львівське-Різдвяне", photo: "pivo.jpg", price: 31.52 },
 ];
 
 let cart = [];
