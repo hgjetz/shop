@@ -126,8 +126,8 @@ body {
 
 /* Кнопки */
 button {
-  background-color: #007bff;
-  color: white;
+  background-color: #0099ff;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -162,10 +162,6 @@ button:hover {
 .tab:hover {
   background-color: #0056b3;
   transform: scale(1.05);
-}
-
-.tab:active {
-  background-color: #004085;
 }
 
 .tab.active {
