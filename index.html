@@ -8,6 +8,7 @@
   <link rel="icon" href="./images/icon.svg" />
 </head>
 <body>
+
   <header class="header">
     <h1 class="logo">Інтернет-магазин продуктів</h1>
     <div class="cart">
@@ -22,18 +23,60 @@
       </div>
     </div>
   </header>
-  <hr />
+
   <main class="main-content">
-    <!-- Табуляція для категорій -->
     <div class="tabs">
-      <button class="tab" onclick="filterProducts('all')">Всі товари</button>
+      <button class="tab active" onclick="filterProducts('all')">Всі товари</button>
       <button class="tab" onclick="filterProducts('product')">Продукти</button>
       <button class="tab" onclick="filterProducts('cigarette')">Сигарети</button>
       <button class="tab" onclick="filterProducts('alcohol')">Алкоголь</button>
       <button class="tab" onclick="filterProducts('water')">Вода</button>
     </div>
-    <section id="productList" class="products"></section>
+
+    <section id="productList" class="products">
+      <!-- Контент для всех товаров -->
+      <div class="tab-content all active">
+        <!-- Динамические карточки для всех товаров -->
+      </div>
+
+      <!-- Контент для продуктов -->
+      <div class="tab-content product">
+        <!-- Динамические карточки для продуктов -->
+      </div>
+
+      <!-- Контент для сигарет -->
+      <div class="tab-content cigarette">
+        <!-- Динамические карточки для сигарет -->
+      </div>
+
+      <!-- Контент для алкоголя -->
+      <div class="tab-content alcohol">
+        <!-- Динамические карточки для алкоголя -->
+      </div>
+
+      <!-- Контент для воды -->
+      <div class="tab-content water">
+        <!-- Динамические карточки для воды -->
+      </div>
+    </section>
   </main>
+
+  <!-- Модальное окно с подробной информацией -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalProductName"></h2>
+      <img id="modalProductImage" src="" alt="" />
+      <p><strong>Бренд:</strong> <span id="modalProductBrand"></span></p>
+      <p><strong>Ціна:</strong> <span id="modalProductPrice"></span>₴</p>
+      <p><strong>Опис:</strong> <span id="modalProductDescription"></span></p>
+      <p><strong>Вага:</strong> <span id="modalProductWeight"></span> г</p>
+      <p><strong>Рік:</strong> <span id="modalProductYear"></span></p>
+      <p><strong>Наявність на складі:</strong> <span id="modalProductStock"></span></p>
+      <button onclick="addToCartFromModal()">Додати в кошик</button>
+    </div>
+  </div>
+
   <script src="./js/script.js"></script>
 </body>
 </html>
